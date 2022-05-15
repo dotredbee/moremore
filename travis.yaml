@@ -1,0 +1,21 @@
+language : java
+jdk :
+  - openjdks
+
+branches :
+  only :
+    - master
+
+# Traivs CI server Home
+cache :
+  directories :
+    - '$HOME/.m2/repository'
+    - '$HOME/ .gradle'
+
+script : "./gradlew clean build"
+
+# CI notice by mail when complate installing.
+notifications :
+  email :
+    recipients :
+      - flack319@gmail.com
